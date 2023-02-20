@@ -36,9 +36,15 @@
     <div id='addtask'>
         <form id="task_form" action="" method="post">
             <h3>Activité à faire</h3>
-            <input class= "task-text" type="text" name="comment" id="task-text" placeholder="Nouvelle tâche*" required minlength="20">
+            <input class= "task-text" type="text" name="comment" id="task-text" 
+                <?php if(empty($_SESSION['login'])){  
+                    echo "placeholder='Il faut se connecter pour ajouter une action' disabled";
+                }else{
+                    echo "placeholder='Nouvelle tâche'";
+                }
+                    ?>>
             </select>
-            <input class="submit" id="submit" onClick="window.location.reload()" type="submit" value="Ajouter">
+            <input class="submit" id="submit" onClick="window.location.reload()" type="submit" value="Ajouter" >
         </form>
     </div>
 
