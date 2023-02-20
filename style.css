@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Mukta&family=Nunito:ital,wght@0,200;0,400;0,700;1,200&family=Shantell+Sans:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcead1;
+    color: rgb(41, 13, 6);  
+}
+
+
+
+html{
+    font-family: 'Orbitron', monospace;
+}
+
+/* ------- CSS du header ------*/
+header{
+    display:flex;
+    flex-direction: row;
+    height:7%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: static;
+    margin-bottom:3%;
+    border : 2px solid rgb(110, 80, 14);
+    border-style:none none solid none;
+    padding:3%0%4%0%;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(217, 255, 0, 0.7);
+    border-radius: 50%;
+    
+}
+
+li{
+    height:100%;
+    list-style-type: none;
+    margin:0px 20px 0px 20px;  
+}
+
+li a{
+    text-decoration: none;
+    color:rgb(110, 80, 14);
+    font-size: 1.8em;
+    font-family: 'Shantell Sans', cursive;
+    padding:1%5%1%5%;
+    margin:1%;
+}
+
+li p{
+    color:antiquewhite;
+}
+
+a:hover{
+    color: rgb(247, 205, 19);
+
+}
+
+/* ------- CSS des formulaires ------*/
+
+#inscription_form, #connexion_form, #task-text{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: center;
+    padding: 2%;
+}
+
+#inscription_form input, #connexion_form input{
+    margin:1%;
+    padding-left:5%;
+    height:4vh;
+    width:40%;
+    font-size: 1.3em;
+    border-radius: 1px;
+    background-color: rgba(245, 195, 148, 0.6);
+    color: #262c38;
+    border:none;
+    font-family: 'Shantell Sans', cursive;
+}
+
+#inscription_form input:hover, #connexion_form input:hover{
+    background-color: rgba(209, 102, 236);
+}
+
+
+
+#inscription-place{
+    background-color: rgb(207, 206, 206);
+    border-radius: 1%;
+}
+
+#error-message{
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+}
+
+#inscription-button, #connexion-button, #commentaire-button{
+   
+    background-color: rgba(245, 195, 148, 0.8);   
+    border : 2px solid rgb(110, 80, 14);
+    border-style: solid none none none;
+    border-radius: 5%;
+    margin:1%2%1%2%;
+    text-transform: uppercase;
+    font-weight: 600;
+    width:15%;
+    height:50px;
+    font-family: 'Shantell Sans', cursive;
+
+}
+
+#inscription-button:hover, #connexion-button:hover, #profil-button:hover, #commentaire-button:hover{
+    
+    background-color: rgba(236, 201, 245, 0.3);
+    color: rgb(120, 79, 167);
+
+}
+
+#buttons{
+    margin:2%,0%,2%,2%;
+    padding:1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#task_form .task-text{
+    margin:1%10%1%10%;
+    padding-left:5%;
+    height:6vh;
+    width:80%;
+    font-size: 1.3em;
+    border:none;
+    font-family: 'Shantell Sans', cursive;
+    display:flex;
+}
+
+#task_form .submit{
+    margin:1%10%1%10%;
+    padding-left:5%;
+    height:4vh;
+    width:80%;
+    font-size: 1.3em;
+    border:none;
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+}
+
+#task_form .submit:hover{
+    background-color: rgba(245, 195, 148, 0.8);
+
+}
+
+#connexion-ok{
+    margin-left:5%;
+    font-size: 1.2em;
+    font-family: 'Shantell Sans', cursive;
+}
+
+#task_form h3{
+    text-align: center;
+    font-size: 1.4em;
+    font-family: 'Shantell Sans', cursive;
+}
+
+#task_form input{
+    margin:1%;
+    padding-left:90%;
+    height:6vh;
+    width:80%;
+    font-size: 1.3em;
+    border-radius: 1px;
+    background-color: rgba(245, 195, 148, 0.4);
+    color: #262c38;
+    border:none;
+    font-family: 'Shantell Sans', cursive;
+}
+
+#addtask{
+    width:100%;
+}
+
