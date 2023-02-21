@@ -25,11 +25,11 @@ echo $test->register();
     <div id="error_form">
         <?php
         if(empty($_POST['login'])&&($_POST['password'])){
-            echo "Il faut spécifier un login ! Voyons !";
+            echo "<div id='error-message'>Il faut spécifier un login ! Voyons !</div>";
         }
 
         if(empty($_POST['password'])&&($_POST['login'])){
-            echo "Il faut spécifier un mot de passe !";
+            echo "<div id='error-message'>Il faut spécifier un mot de passe !</div>";
         }
         ?>        
     </div>

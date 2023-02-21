@@ -11,7 +11,6 @@ class ManageUser{
 
     public function register(){
         global $bdd;
-        
         $check_login = $bdd ->prepare("SELECT count(*) as count FROM utilisateurs where login = '$this->login'");
         $check_login->execute();
         $res = $check_login->fetch(PDO::FETCH_ASSOC);        
@@ -54,7 +53,8 @@ class ManageUser{
                 $message = "Vous êtes connecté ".$login;
                 return $message;
             }else{
-                return "Il y a un problème avec vos identifiants";
+                $error_login= "<div id='error-message'>Problème d'identifiant, veuillez vérifier votre login et votre mot de passe </div>";
+                return $error_login;
             }
         }else{
             return "Ce login n'existe pas !";

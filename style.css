@@ -10,9 +10,7 @@
 
 
 
-html{
-    font-family: 'Orbitron', monospace;
-}
+
 
 /* ------- CSS du header ------*/
 header{
@@ -34,20 +32,20 @@ ul{
     flex-direction: row;
     justify-content: center;
     background-color: rgba(180, 211, 4, 0.7);
-    border-radius: 50%;    
+    border-radius: 50%;
 }
 
 li{
     height:100%;
     list-style-type: none;
-    margin:0px 20px 0px 20px;  
+    margin:0px 15px 0px 15px;  
 }
 
 li a{
     text-decoration: none;
     color:rgb(110, 80, 14);
     font-size: 1.8em;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Shantell Sans', sans-serif;
     padding:1%5%1%5%;
     margin:1%;
 }
@@ -98,11 +96,12 @@ a:hover{
 #error-message{
     font-family: 'Shantell Sans', cursive;
     text-align: center;
+    color:red;
 }
 
-#inscription-button, #connexion-button, #commentaire-button{
+#inscription-button, #connexion-button, #commentaire-button, #task-button{
    
-    background-color: rgba(245, 195, 148, 0.8);   
+    background-color: rgba(92, 53, 10, 0.3);   
     border : 2px solid rgb(110, 80, 14);
     border-style: solid none none none;
     border-radius: 5%;
@@ -111,14 +110,14 @@ a:hover{
     font-weight: 600;
     width:15%;
     height:50px;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
-#inscription-button:hover, #connexion-button:hover, #profil-button:hover, #commentaire-button:hover{
+#inscription-button:hover, #connexion-button:hover, #profil-button:hover, #task-button:hover{
     
     background-color: rgba(236, 201, 245, 0.3);
-    color: rgb(120, 79, 167);
+    color: rgb(45, 63, 12);
 
 }
 
@@ -138,7 +137,7 @@ a:hover{
     width:80%;
     font-size: 1.3em;
     border:none;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
     display:flex;
 }
 
@@ -149,7 +148,7 @@ a:hover{
     width:80%;
     font-size: 1.3em;
     border:none;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
@@ -161,13 +160,13 @@ a:hover{
 #connexion-ok{
     margin-left:5%;
     font-size: 1.2em;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #task_form h3{
     text-align: center;
     font-size: 1.4em;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #task_form input{
@@ -180,7 +179,7 @@ a:hover{
     background-color: rgba(245, 195, 148, 0.4);
     color: #262c38;
     border:none;
-    font-family: 'Shantell Sans', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #addtask{
