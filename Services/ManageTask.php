@@ -1,17 +1,16 @@
 <?php
 class ManageTask{
     private $id;
-    public $task, $id_user, $datecreate, $datedone, $taskdone, $taskcancel;
+    public $task, $id_user, $datecreate;
+    public $datedone=null;
+    public $taskdone=null;
+    public $taskcancel=null;
 
-    function __construct($task, $id_user, $datecreate, $datedone, $taskdone, $taskcancel) {
+    function __construct($task, $id_user, $datecreate) {
         $this->task = $task;
         $this->id_user = $id_user;
         $this->datecreate = $datecreate;
-        $this->datedone = $datedone;
-        $this->$taskdone = $taskdone;
-        $this->$taskcancel = $taskcancel;
     }
-
 
     public function addTask(){
         global $bdd;
@@ -21,22 +20,17 @@ class ManageTask{
                return "Vous avez ajouté une nouvelle tâche avec succès";
     }
 
-
-    public function displayTodolist(){
+    public function dateDone($a){
         global $bdd;
-        $allComment = $bdd -> prepare("SELECT task.task, task.datecreate, task.datedone, task.taskdone, task.taskcancel, utilisateurs.login from task join utilisateurs on utilisateurs.id = task.id_user where utilisateurs.id = $this->id_user");
-        $allComment -> execute();
-        $result = $allComment->fetchAll(PDO::FETCH_ASSOC);
-        //echo var_dump($result);
-        //tableau html -->
-        echo "<div id='todolist'><table>
-        <thead><tr><td>A faire</td><td>Date de création</td><td>Utilisateur</td></tr></thead><tbody>";
-        for ($i = (count($result)-1); $i >= 0; $i--) {
-        echo "<tr><td>Le ".$result[$i]['task']."</td><td> ".$result[$i]['datecreate']."</td><td>".$result[$i]['login']."</td></tr>";
-        }
-        echo "</tbody></table></div>";
-    }
+         
+        $mydate=getdate(date("U"));
+        $myhour=date("H:i:s");
 
+        $newDateDone="$mydate[year]/$mydate[mon]/$mydate[mday] $myhour";
+         $this->datedone = $newDateDone;   
+        $sqlupdate = $bdd -> prepare("UPDATE task SET datedone = '$newDateDone' WHERE datecreate = '$a'");
+        $sqlupdate->execute(array($this->datedone));
+    }
 
 
 }

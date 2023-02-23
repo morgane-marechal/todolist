@@ -3,20 +3,16 @@
 <?php require('db_connect.php'); ?>
 <?php require('Services/ManageUser.php'); ?>
 <?php require('Services/ManageTask.php'); ?>
+<?php require('Services/Displaytask.php'); ?>
 <?php
 //echo "Task.php => Todolist";
-$task="";
-$datecreate="0000-00-00 00:00:00";
-$datedone="0000-00-00 00:00:00";
-$id_user=$_SESSION['id'];
-$taskdone=0;
-$taskcancel=0;
 
-$testtdl = new ManageTask($task, $id_user, $datecreate, $datedone, $taskdone, $taskcancel);
-
-echo $testtdl->displayTodolist();
-
-
+// ------methode pour afficher la todolist-------------
+if (isset($_SESSION['login'])&& !empty($_SESSION['login'])){
+    $id_user = $_SESSION['id']; 
+    $testdisplay2=new Displaytask($id_user);
+    echo $testdisplay2->displayTodolist();
+}
 
 
 ?>

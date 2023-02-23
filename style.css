@@ -27,6 +27,10 @@ header{
     padding:3%0%4%0%;  
 }
 
+nav{
+    width:70%;
+}
+
 ul{
     display: flex;
     flex-direction: row;
@@ -141,6 +145,10 @@ a:hover{
     display:flex;
 }
 
+#task_form #task-text:hover{
+    background-color: rgba(245, 195, 148, 0.8);
+}
+
 #task_form .submit{
     margin:1%10%1%10%;
     padding-left:5%;
@@ -154,7 +162,6 @@ a:hover{
 
 #task_form .submit:hover{
     background-color: rgba(245, 195, 148, 0.8);
-
 }
 
 #connexion-ok{
@@ -184,5 +191,34 @@ a:hover{
 
 #addtask{
     width:100%;
+}
+
+table{
+    width:95%;
+    margin:3%2%3%2%;
+}
+td{
+    text-align: center;
+}
+
+thead tr td{
+    font-size:1.2em;
+    font-weight:700;
+}
+
+#cancel, #done{
+    border:none;
+    font-weight:700;
+    height:50px;
+    margin:5%;
+    padding:5%;
+}
+
+#cancel:hover, #done:hover{
+   color:red;
+}
+
+#todolist{
+    margin:3%0%2%0%;   
 }
 

@@ -1,12 +1,7 @@
 const place = document.getElementById("inscription-place");
-//const profilPlace = document.getElementById("profil-place");
-//profilPlace.innerHTML="hello";
 const connexionButton = document.getElementById("connexion-button");
 const inscriptionButton = document.getElementById("inscription-button");
-
 let isOk = document.getElementById("isOk");
-//document.getElementById("isOk").innerHTML="check isOk";
-
 
 inscriptionButton.addEventListener("click", () => {
     fetch('inscription.php')
@@ -54,7 +49,7 @@ connexionButton.addEventListener("click", () => {
                     })
                     .then((content) => {
                         place.innerHTML=content
-                        location.reload();
+                        //location.reload();
                     })
             })
         })

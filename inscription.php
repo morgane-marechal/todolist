@@ -2,14 +2,12 @@
 <?php require('db_connect.php'); ?>
 <?php require('Services/ManageUser.php'); ?>
 <?php
-
-if(!empty($_POST)&& $_POST['login']&& $_POST['password']) {
-$login = htmlspecialchars($_POST['login']);
-$password = htmlspecialchars($_POST['password']);
-$test = new ManageUser($login,$password);
-echo $test->register();
-}
-
+    if(!empty($_POST)&& $_POST['login']&& $_POST['password']) {
+    $login = htmlspecialchars($_POST['login']);
+    $password = htmlspecialchars($_POST['password']);
+    $test = new ManageUser($login,$password);
+    echo $test->register();
+    }
 ?>
 
 
