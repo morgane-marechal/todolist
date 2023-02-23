@@ -55,18 +55,17 @@ let allDel=document.querySelectorAll('.del');
 let btnTest=document.getElementsByClassName(".del");
 
 
-function myFunction(){
-    console.log("c'est 201");
-    console.log("allDel: "+allDel.length);
+//function myFunction(){
+    //console.log("allDel: "+allDel.length);
     for (const btn of allDel){
         btn.addEventListener("click", (e) =>{
            // e.preventDefault();
             let idTask= e.target.id
-            console.log("hello".idTask)
+            console.log("hello  "+idTask)
             deleteMe(idTask);
         })
     }
-}
+//}
     
 
 
@@ -75,6 +74,6 @@ async function deleteMe(idTask){
     await fetch(`todolist.php?delete=${idTask}`)
     .then((resp)=> {
         console.log(resp)
-        return resp.json();
+        return resp.text();
     })
 }

@@ -20,10 +20,12 @@
             for ($i = (count($result)-1); $i >= 0; $i--) {
             echo "<tr><td>".$result[$i]['task']."</td><td> ".$result[$i]['datecreate']."</td><td>".$result[$i]['login']."</td><td>";
             if ($result[$i]['datedone']!=null){
-                echo "<button id='done'>".$result[$i]['datedone']."</div>";
+                echo "<button id='done'>".$result[$i]['datedone']."</div>
+                <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
+
             }else{
-                echo "<button id='done' name='$i' onclick='dateDone(".$result[$i]['id'].")'>Fait!</button></td>
-                <td><button id='cancel".$result[$i]['id']."' class='del' onclick='myFunction()' <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
+                echo "<button id='done'>Fait!</button></td>
+                <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
 
             }
             var_dump($result[$i]['id']);

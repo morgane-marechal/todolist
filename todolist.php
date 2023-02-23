@@ -65,7 +65,10 @@
                 $deleteTask->delete((int) $_GET['delete']);
                 die();
             }
+
+      
     ?> 
+
 
 
 
@@ -75,7 +78,15 @@
     </div>
 
     <!-- appel de la todolist ici -->
-        <div id='displaytask'></div>
+        <div id='displaytask'>
+            <?php 
+                if (isset($_SESSION['login'])&& !empty($_SESSION['login'])){
+                    $id_user = $_SESSION['id']; 
+                    $testdisplay2=new Displaytask($id_user);
+                    echo $testdisplay2->displayTodolist();
+                    }  
+            ?>
+        </div>
 
 
  
