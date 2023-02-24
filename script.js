@@ -49,7 +49,7 @@ connexionButton.addEventListener("click", () => {
                     })
                     .then((content) => {
                         place.innerHTML=content
-                        //location.reload();
+                        location.replace('todolist.php');
                     })
             })
         })

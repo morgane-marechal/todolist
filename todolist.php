@@ -70,6 +70,7 @@
                 $id_user = $_SESSION['id'];
                 $updateTask = new Displaytask($id_user);
                 $updateTask->update((int) $_GET['update']);
+
                 die();
             }
 

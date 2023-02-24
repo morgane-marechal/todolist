@@ -18,14 +18,16 @@
             echo "<div id='todolist'><table>
             <thead><tr><td>A faire</td><td>Date de création</td><td>Utilisateur</td><td>Date de fin</td><td></td></tr></thead><tbody>";
             for ($i = (count($result)-1); $i >= 0; $i--) {
-            echo "<tr><td>".$result[$i]['task']."</td><td> ".$result[$i]['datecreate']."</td><td>".$result[$i]['login']."</td><td>";
+            echo "<tr id='row".$i."'><td>".$result[$i]['task']."</td><td> ".$result[$i]['datecreate']."</td><td>".$result[$i]['login']."</td><td>";
             if ($result[$i]['datedone']!=null){
-                echo "<button id='done'>".$result[$i]['datedone']."</div>
-                <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
+
+                echo "<button id=".$result[$i]['id']." style='color: #7BA30F' class='done' >".$result[$i]['datedone']."</div>
+                <td><button id=".$result[$i]['id']." class='del' <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>
+                ";
 
             }else{
-                echo "<button id=".$result[$i]['id']." class='done'>Fait?</button></td>
-                <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
+                echo "<button id=".$result[$i]['id']." class='done' <a class='delete' href=todolist.php?update=".$result[$i]['id'].">Fait?</button></td>
+                <td><button id=".$result[$i]['id']." class='del' <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
 
             }
             //var_dump($result[$i]['id']);

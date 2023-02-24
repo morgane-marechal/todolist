@@ -206,7 +206,7 @@ thead tr td{
     font-weight:700;
 }
 
-#cancel, #done{
+.cancel, .done{
     border:none;
     font-weight:700;
     height:50px;
