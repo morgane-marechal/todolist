@@ -24,11 +24,11 @@
                 <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
 
             }else{
-                echo "<button id='done'>Fait!</button></td>
+                echo "<button id=".$result[$i]['id']." class='done'>Fait?</button></td>
                 <td><button id=".$result[$i]['id']." class='del'  <a class='delete' href=todolist.php?delete=".$result[$i]['id']."></a>Supprimer</button></td></tr>";
 
             }
-            var_dump($result[$i]['id']);
+            //var_dump($result[$i]['id']);
             }
             echo "</tbody></table></div>";
             
@@ -39,6 +39,16 @@
         global $bdd;
         $delete= $bdd ->prepare("DELETE from task WHERE id = '$idtask'");
         $delete->execute();
+    }
+
+    public function update(int $idtask){
+        global $bdd;
+        $mydate=getdate(date("U"));
+        $myhour=date("H:i:s");
+        //valeur de la date pour le type sql datetime YYYY-MM-DD
+        $datedone="$mydate[year]/$mydate[mon]/$mydate[mday] $myhour";
+        $done = $bdd->prepare("UPDATE task SET datedone = '$datedone' WHERE id = '$idtask'");
+        $done->execute();
     }
         
  

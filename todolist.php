@@ -66,6 +66,13 @@
                 die();
             }
 
+            if (isset($_GET['update'])){
+                $id_user = $_SESSION['id'];
+                $updateTask = new Displaytask($id_user);
+                $updateTask->update((int) $_GET['update']);
+                die();
+            }
+
       
     ?> 
 
@@ -73,9 +80,9 @@
 
 
 
-    <div id="buttons">
+    <!-- <div id="buttons">
         <button id="task-button">Refresh To do list</button>
-    </div>
+    </div> -->
 
     <!-- appel de la todolist ici -->
         <div id='displaytask'>
