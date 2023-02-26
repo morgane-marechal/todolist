@@ -2,8 +2,8 @@
 
 // --------------------connexion à PDO----------------------------
 
-$dsn = 'mysql:host=localhost;dbname=todolist;charset=utf8';
-$user = 'root';
+$dsn = '';
+$user = '';
 $password = '';
 
 
